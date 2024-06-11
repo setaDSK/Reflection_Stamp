@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" />
+    <title>振り返りスタンプ</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- スタンプ欄 -->
+      <div id="stamp_container">
+        <div class="stamp_tab">
+          <ul class="tab_menu">
+            <li class="tab_menu-item is-active" data-tab="01">なんにでも</li>
+            <li class="tab_menu-item" data-tab="02">顔</li>
+            <li class="tab_menu-item" data-tab="03">髪の毛</li>
+            <li class="tab_menu-item" data-tab="04">目</li>
+            <li class="tab_menu-item" data-tab="05">身体</li>
+          </ul>
+          <div class="tab_panel">
+            <!-- なんにでも -->
+            <div class="tab_panel-box tab_panel-box-all is-show" data-panel="01">
+              <ul class="stamp_list-all">
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="a-kawaii"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/a-kawaii.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="a-kokosuki"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/a-kokosuki.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="a-kesikaran"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/a-kesikaran.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="a-juryoku"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/a-juryoku.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="a-kouzu"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/a-kouzu.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 顔 -->
+            <div class="tab_panel-box tab_panel-box-face" data-panel="02">
+              <ul class="stamp_list-face">
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="f-kaogayoi"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/f-kaogayoi.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="f-hyoujoukawaii"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img
+                        src="img/stamp/f-hyoujoukawaii.png"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="f-totonotteru"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img
+                        src="img/stamp/f-totonotteru.png"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="f-patusyusei"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img
+                        src="img/stamp/f-patusyusei.png"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </li>
+                
+              </ul>
+            </div>
+            <!-- 髪の毛 -->
+            <div class="tab_panel-box tab_panel-box-hair" data-panel="03">
+              <ul class="stamp_list-hair">
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="hair-nagare"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/hair-nagare.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="hair-suki"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/hair-suki.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 目 -->
+            <div class="tab_panel-box tab_panel-box-eye" data-panel="04">
+              <ul class="stamp_list-eye">
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="eye-matuge"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/eye-matuge.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="eye-suikomareru"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/eye-suikomareru.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 身体 -->
+            <div class="tab_panel-box tab_panel-box-body" data-panel="05">
+              <ul class="stamp_list-body">
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="body-hutoi"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/body-hutoi.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="body-hosoi"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/body-hosoi.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="body-kata"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/body-kata.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+      <!-- イラスト欄 -->
+
+      <div
+        id="work_container"
+        class="work_container"
+        onmousedown="startDrag(event)"
+      >
+      <div id="trash_can">
+        ゴミ箱
+      </div>
+        <img class="work" src="img/イラスト見本.jpg" />
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="//daybrush.com/moveable/release/latest/dist/moveable.min.js"></script>
+  </body>
+</html>
