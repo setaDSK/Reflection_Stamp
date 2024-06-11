@@ -1,0 +1,151 @@
+ul{
+  list-style: none;
+}
+
+#wrapper {
+  width: auto;
+  height: 90vh;
+  display: flex;
+  margin: auto;
+  
+}
+
+#stamp_container {
+  width: 50%;
+}
+
+/* タブ設定 */
+.tab_menu{
+  display: flex;
+  align-items: flex-end; /* メニューを下揃え&高さを調整 */
+  justify-content: center;
+  min-height: 50px; /* メニュー切替時にタブがズレないように */
+  padding: 0;
+  margin: 0;
+}
+
+.tab_menu-item {
+  list-style: none;
+  width: 200px;
+  padding: 8px 5px; /* メニューに高さを付ける */
+  text-align: center;
+  margin-right: 6px;
+  background-color: #cdcdcd;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+  transition: all .3s; /* アニメーション */
+}
+
+.tab_menu-item:last-of-type {
+  margin-right: 0px;
+}
+
+/* is-activeがついている時のスタイル */
+.tab_menu-item.is-active {
+  background-color: rgba(48, 172, 249);
+  color: #ffffff;
+  padding: 12px 5px;
+}
+/* タブをいったん非表示に */
+/* [class^="tab_panelBox"]{
+  display: none;
+}  */
+.tab_panel-box-all{
+  display: none;
+}
+.tab_panel-box-face{
+  display: none;
+}
+.tab_panel-box-hair{
+  display: none;
+}
+.tab_panel-box-eye{
+  display: none;
+}
+.tab_panel-box-body{
+  display: none;
+}
+
+/* is-showがついているときのスタイル */
+.tab_panel-box.is-show{
+  display: block;
+}
+
+#work_container {
+  position: relative;
+  width: 50%;
+  height: 90vh;
+  border: 1px solid black;
+}
+
+.work {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  right: 0;
+}
+#trash_can{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: aqua;
+}
+
+.draggable {
+  position: absolute;
+  cursor: pointer;
+}
+
+[class^="stamp_list"] {
+  /* list-style-type: none; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+li[class^="stamp_list"]  {
+  width: 10vw;
+  height: 10vw;/*これでリストが正方形に*/
+  border: 1px;
+}
+
+.stamp_btn {
+  width: 10vw;
+  height: 10vw;/*これでリストが正方形に*/
+}
+
+.stamp_btn button {
+  background-color: white;
+  border-color: rgb(204, 204, 204);
+  border-width: 0.5px;
+}
+
+.stamp_btn img{
+  width: 10vw;
+  height: 10vw;/*これでリストが正方形に*/  
+  object-fit: contain;
+}
+
+/* moveableのデフォルトの線を見えなくする */
+.moveable-line{
+  width: 0px !important;
+}
+.moveable-control{
+  width:20px !important;
+  height: 20px !important;
+  border: none !important;
+  background: #575757 !important;
+  opacity: 0 !important;
+}
+.moveable-control.moveable-origin{
+  width: 0px !important;
+  height: 0px !important;
+  border: none !important;
+}
+
+.newStamp{
+  width: 100px;
+}
