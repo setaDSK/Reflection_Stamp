@@ -4,14 +4,24 @@ ul{
 
 #wrapper {
   width: auto;
-  height: 90vh;
+  /* height: 90vh; */
   display: flex;
   margin: auto;
   
 }
 
+#work_container {
+  position: relative;
+  width: 70%;
+  height: 95vh;
+  background-color: #f5f5f5;
+}
+
 #stamp_container {
-  width: 50%;
+  width: 30%;
+  /* padding: 10px; */
+  background-color: white;
+  border-right: 1px solid #cdcdcd;
 }
 
 /* タブ設定 */
@@ -24,17 +34,22 @@ ul{
   margin: 0;
 }
 
+.tab_icon{
+  width: 30px;
+}
+
 .tab_menu-item {
   list-style: none;
   width: 200px;
-  padding: 8px 5px; /* メニューに高さを付ける */
+  padding: 6px 3px; /* メニューに高さを付ける */
   text-align: center;
-  margin-right: 6px;
-  background-color: #cdcdcd;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  /* margin-right: 6px; */
+  /* background-color: #cdcdcd; */
+  border-bottom: 2px solid #cdcdcd;
+  /* border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
   cursor: pointer;
-  transition: all .3s; /* アニメーション */
+  /* transition: all .3s; アニメーション */
 }
 
 .tab_menu-item:last-of-type {
@@ -43,9 +58,9 @@ ul{
 
 /* is-activeがついている時のスタイル */
 .tab_menu-item.is-active {
-  background-color: rgba(48, 172, 249);
-  color: #ffffff;
-  padding: 12px 5px;
+  /* background-color: rgba(48, 172, 249); */
+  border-bottom: 2px solid #ED6D1F;
+  /* padding: 12px 5px; */
 }
 /* タブをいったん非表示に */
 /* [class^="tab_panelBox"]{
@@ -66,24 +81,52 @@ ul{
 .tab_panel-box-body{
   display: none;
 }
+.tab_panel-box-light{
+  display: none;
+}
+.tab_panel-box-color{
+  display: none;
+}
 
 /* is-showがついているときのスタイル */
 .tab_panel-box.is-show{
   display: block;
 }
 
-#work_container {
-  position: relative;
-  width: 50%;
-  height: 90vh;
-  border: 1px solid black;
+[class^="stamp_list"] {
+  /* list-style-type: none; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 0;
+}
+
+li[class^="stamp_list"]  {
+  /* width: 8vw;
+  height: 8vw;これでリストが正方形に */
+  border: 1px;
+}
+
+.stamp_btn button {
+  background-color: white;
+  border-color: rgb(204, 204, 204);
+  border-width: 0.5px;
+  border: none;
+}
+
+.stamp_btn img{
+  width: 8vw;
+  height: 8vw;/*これでリストが正方形に*/  
+  object-fit: contain;
 }
 
 .work {
   max-width: 100%;
   max-height: 100%;
   position: absolute;
+  left: 0;
   right: 0;
+  margin: auto;
 }
 #trash_can{
   position: absolute;
@@ -91,42 +134,16 @@ ul{
   left: 10px;
   width: 50px;
   height: 50px;
-  background-color: aqua;
+  margin: 5px;
+  /* background-color: aqua; */
+}
+#trash_can img{
+  width: 50px;
 }
 
 .draggable {
   position: absolute;
   cursor: pointer;
-}
-
-[class^="stamp_list"] {
-  /* list-style-type: none; */
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-li[class^="stamp_list"]  {
-  width: 10vw;
-  height: 10vw;/*これでリストが正方形に*/
-  border: 1px;
-}
-
-.stamp_btn {
-  width: 10vw;
-  height: 10vw;/*これでリストが正方形に*/
-}
-
-.stamp_btn button {
-  background-color: white;
-  border-color: rgb(204, 204, 204);
-  border-width: 0.5px;
-}
-
-.stamp_btn img{
-  width: 10vw;
-  height: 10vw;/*これでリストが正方形に*/  
-  object-fit: contain;
 }
 
 /* moveableのデフォルトの線を見えなくする */
@@ -149,3 +166,4 @@ li[class^="stamp_list"]  {
 .newStamp{
   width: 100px;
 }
+
