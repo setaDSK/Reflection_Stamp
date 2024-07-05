@@ -12,15 +12,35 @@
       <div id="stamp_container">
         <div class="stamp_tab">
           <ul class="tab_menu">
-            <li class="tab_menu-item is-active" data-tab="01">なんにでも</li>
-            <li class="tab_menu-item" data-tab="02">顔</li>
-            <li class="tab_menu-item" data-tab="03">髪の毛</li>
-            <li class="tab_menu-item" data-tab="04">目</li>
-            <li class="tab_menu-item" data-tab="05">身体</li>
+            <li class="tab_menu-item is-active" data-tab="01">
+              <img class="tab_icon" src="img/item/なんでも.png" />
+            </li>
+            <li class="tab_menu-item" data-tab="02">
+              <img class="tab_icon" src="img/item/顔.png" />
+            </li>
+            <li class="tab_menu-item" data-tab="03">
+              <img class="tab_icon" src="img/item/髪.png" />
+            </li>
+            <li class="tab_menu-item" data-tab="04">
+              <img class="tab_icon" src="img/item/目.png" />
+            </li>
+            <li class="tab_menu-item" data-tab="05">
+              <img class="tab_icon" src="img/item/身体.png" />
+            </li>
+            <li class="tab_menu-item" data-tab="06">
+              <img class="tab_icon" src="img/item/陰影.png" />
+            </li>
+            <li class="tab_menu-item" data-tab="07">
+              <img class="tab_icon" src="img/item/色.png" />
+            </li>
           </ul>
           <div class="tab_panel">
             <!-- なんにでも -->
-            <div class="tab_panel-box tab_panel-box-all is-show" data-panel="01">
+            <div
+              class="tab_panel-box tab_panel-box-all is-show"
+              data-panel="01"
+            >
+              <p class="category_name">なんでも</p>
               <ul class="stamp_list-all">
                 <li>
                   <div class="stamp_btn">
@@ -76,6 +96,7 @@
             </div>
             <!-- 顔 -->
             <div class="tab_panel-box tab_panel-box-face" data-panel="02">
+              <p class="category_name">顔</p>
               <ul class="stamp_list-face">
                 <li>
                   <div class="stamp_btn">
@@ -93,10 +114,7 @@
                       data-id="f-hyoujoukawaii"
                       onclick="addStamp(this.dataset.id)"
                     >
-                      <img
-                        src="img/stamp/f-hyoujoukawaii.png"
-                        alt=""
-                      />
+                      <img src="img/stamp/f-hyoujoukawaii.png" alt="" />
                     </button>
                   </div>
                 </li>
@@ -106,10 +124,7 @@
                       data-id="f-totonotteru"
                       onclick="addStamp(this.dataset.id)"
                     >
-                      <img
-                        src="img/stamp/f-totonotteru.png"
-                        alt=""
-                      />
+                      <img src="img/stamp/f-totonotteru.png" alt="" />
                     </button>
                   </div>
                 </li>
@@ -119,18 +134,16 @@
                       data-id="f-patusyusei"
                       onclick="addStamp(this.dataset.id)"
                     >
-                      <img
-                        src="img/stamp/f-patusyusei.png"
-                        alt=""
-                      />
+                      <img src="img/stamp/f-patusyusei.png" alt="" />
                     </button>
                   </div>
                 </li>
-                
               </ul>
             </div>
             <!-- 髪の毛 -->
             <div class="tab_panel-box tab_panel-box-hair" data-panel="03">
+              <p class="category_name">髪の毛</p>
+
               <ul class="stamp_list-hair">
                 <li>
                   <div class="stamp_btn">
@@ -156,6 +169,7 @@
             </div>
             <!-- 目 -->
             <div class="tab_panel-box tab_panel-box-eye" data-panel="04">
+              <p class="category_name">目</p>
               <ul class="stamp_list-eye">
                 <li>
                   <div class="stamp_btn">
@@ -181,6 +195,8 @@
             </div>
             <!-- 身体 -->
             <div class="tab_panel-box tab_panel-box-body" data-panel="05">
+              <p class="category_name">身体</p>
+
               <ul class="stamp_list-body">
                 <li>
                   <div class="stamp_btn">
@@ -214,7 +230,168 @@
                 </li>
               </ul>
             </div>
-          
+            <!-- 陰影 -->
+            <div class="tab_panel-box tab_panel-box-light" data-panel="06">
+              <p class="category_name">光と影</p>
+              <ul class="stamp_list-light">
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="light-yoi"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/light-yoi.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="light-shadow"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/light-shadow.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="light-barabara"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/light-barabara.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="light-hakkiri"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/light-hakkiri.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="light-henka"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/light-henka.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="light-lighting"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/light-lighting.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="light-tuyoku"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/light-tuyoku.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 色 -->
+            <div class="tab_panel-box tab_panel-box-color" data-panel="07">
+              <p class="category_name">色</p>
+              <ul class="stamp_list-color">
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="color-akami"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/color-akami.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="color-awai"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/color-awai.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="color-kawaii"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/color-kawaii.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="color-kirei"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/color-kirei.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="color-mazari"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/color-mazari.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="color-tantyou"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/color-tantyou.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="color-touitu"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/color-touitu.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
+                      data-id="color-yusaisyoku"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/color-yusaisyoku.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -226,10 +403,10 @@
         class="work_container"
         onmousedown="startDrag(event)"
       >
-      <div id="trash_can">
-        ゴミ箱
-      </div>
-        <img class="work" src="img/イラスト見本.jpg" />
+        <div id="trash_can">
+          <img src="img/item/ゴミ箱.png" />
+        </div>
+        <img class="work" src="img/illustration/sample2.png" />
       </div>
     </div>
 
