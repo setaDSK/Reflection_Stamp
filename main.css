@@ -126,6 +126,8 @@ li[class^="stamp_list"]  {
   position: absolute;
   left: 0;
   right: 0;
+  top: 0;
+  bottom: 0;
   margin: auto;
 }
 #trash_can{
@@ -150,9 +152,9 @@ li[class^="stamp_list"]  {
 .moveable-line{
   width: 0px !important;
 }
-.moveable-control{
-  width:20px !important;
-  height: 20px !important;
+.moveable-control{/*拡大縮小*/
+  width:30px !important;
+  height: 30px !important;
   border: none !important;
   background: #575757 !important;
   opacity: 0 !important;
