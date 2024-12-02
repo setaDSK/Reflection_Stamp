@@ -45,6 +45,16 @@
                 <li>
                   <div class="stamp_btn">
                     <button
+                      data-id="a-allow"
+                      onclick="addStamp(this.dataset.id)"
+                    >
+                      <img src="img/stamp/a-allow.png" alt="" />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="stamp_btn">
+                    <button
                       data-id="a-kawaii"
                       onclick="addStamp(this.dataset.id)"
                     >
@@ -498,6 +508,10 @@
             </div>
           </div>
         </div>
+        <!-- イラストアップロードボタン -->
+        <div class="upload-container">
+          <input type="file" id="imageUpload" accept="image/*" />
+        </div>
       </div>
 
       <!-- イラスト欄 -->
@@ -510,7 +524,7 @@
         <div id="trash_can">
           <img src="img/item/ゴミ箱.png" />
         </div>
-        <img class="work" src="img/illustration/sample2.png" />
+        <!-- <img class="work" src="img/illustration/sample2.png" /> -->
       </div>
     </div>
 
