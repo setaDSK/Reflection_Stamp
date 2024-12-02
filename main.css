@@ -146,13 +146,15 @@ li[class^="stamp_list"]  {
 .draggable {
   position: absolute;
   cursor: pointer;
+  transform-origin: center center;
 }
 
 /* moveableのデフォルトの線を見えなくする */
 .moveable-line{
   width: 0px !important;
 }
-.moveable-control{/*拡大縮小*/
+/*拡大縮小*/
+.moveable-control{
   width:30px !important;
   height: 30px !important;
   border: none !important;

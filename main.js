@@ -73,6 +73,8 @@ function addStamp(stampType) {
     draggable: true, //ここtrueにしないと拡大縮小の枠が移動しない
     resizable: true,
     keepRatio: true,
+    rotatable: true,
+    pinchable: true,
     renderDirections: ["nw", "ne", "sw", "se"],
   });
 
@@ -80,6 +82,10 @@ function addStamp(stampType) {
   move.on("resize", ({ target, width, height }) => {
     target.style.width = width + "px";
     target.style.height = height + "px";
+  });
+  //回転
+  move.on("rotate", ({ target, transform }) => {
+    target.style.transform = transform
   });
 }
 
@@ -218,6 +224,61 @@ function stopTouchDrag() {
   }
 }
 
+//ピンチアウト拡大縮小
+let currentTouches = [];
+let initialDistance = 0;
+let scale = 1;
+
+document.getElementById('work_container').addEventListener('touchstart', function(event) {
+  if (event.target.classList.contains('draggable')) {
+    if (event.touches.length === 2) {
+      // 2本指タッチ開始
+      currentTouches = [...event.touches];
+      initialDistance = getDistance(currentTouches[0], currentTouches[1]);
+    }
+  }
+});
+
+document.getElementById('work_container').addEventListener('touchmove', function(event) {
+  if (event.target.classList.contains('draggable')) {
+    if (event.touches.length === 2 && currentTouches.length === 2) {
+      // 現在のタッチ情報を取得
+      const newTouches = [...event.touches];
+      const newDistance = getDistance(newTouches[0], newTouches[1]);
+
+      // 拡大率を計算
+      const scaleChange = newDistance / initialDistance;
+      scale *= scaleChange;
+
+      // 要素を拡大縮小
+      event.target.style.transform = `scale(${scale})`;
+
+      // 状態を更新
+      currentTouches = newTouches;
+      initialDistance = newDistance;
+
+      // preventDefault を呼び出して、ブラウザの標準動作を無効化
+      event.preventDefault();
+    }
+  }
+});
+
+document.getElementById('work_container').addEventListener('touchend', function(event) {
+  // タッチが終了したら状態をリセット
+  if (event.touches.length < 2) {
+    currentTouches = [];
+    initialDistance = 0;
+  }
+});
+
+// 2点間の距離を計算する関数
+function getDistance(touch1, touch2) {
+  const dx = touch2.clientX - touch1.clientX;
+  const dy = touch2.clientY - touch1.clientY;
+  return Math.sqrt(dx * dx + dy * dy);
+}
+
+
 // イベントリスナーを追加
 document
   .getElementById("work_container")
@@ -225,3 +286,23 @@ document
 document
   .getElementById("work_container")
   .addEventListener("touchstart", startTouchDrag, { passive: false });
+
+// 画像アップロードの処理
+//クラウドのみに保存してあるデータ（ローカルに保存していないデータ）はアップロードできない
+//余裕があれば1枚のみアップロードできるようにする
+document.getElementById('imageUpload').addEventListener('change', function(event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const newImage = document.createElement('img');
+      newImage.src = e.target.result;
+      newImage.alt = 'Uploaded Image';
+      newImage.style.position = 'absolute';
+      newImage.classList.add('work');
+      document.getElementById('work_container').appendChild(newImage);
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
