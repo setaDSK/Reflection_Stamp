@@ -225,51 +225,51 @@ function stopTouchDrag() {
 }
 
 //ピンチアウト拡大縮小
-let currentTouches = [];
-let initialDistance = 0;
-let scale = 1;
+// let currentTouches = [];
+// let initialDistance = 0;
+// let scale = 1;
 
-document.getElementById('work_container').addEventListener('touchstart', function(event) {
-  if (event.target.classList.contains('draggable')) {
-    if (event.touches.length === 2) {
-      // 2本指タッチ開始
-      currentTouches = [...event.touches];
-      initialDistance = getDistance(currentTouches[0], currentTouches[1]);
-    }
-  }
-});
+// document.getElementById('work_container').addEventListener('touchstart', function(event) {
+//   if (event.target.classList.contains('draggable')) {
+//     if (event.touches.length === 2) {
+//       // 2本指タッチ開始
+//       currentTouches = [...event.touches];
+//       initialDistance = getDistance(currentTouches[0], currentTouches[1]);
+//     }
+//   }
+// });
 
-document.getElementById('work_container').addEventListener('touchmove', function(event) {
-  if (event.target.classList.contains('draggable')) {
-    if (event.touches.length === 2 && currentTouches.length === 2) {
-      // 現在のタッチ情報を取得
-      const newTouches = [...event.touches];
-      const newDistance = getDistance(newTouches[0], newTouches[1]);
+// document.getElementById('work_container').addEventListener('touchmove', function(event) {
+//   if (event.target.classList.contains('draggable')) {
+//     if (event.touches.length === 2 && currentTouches.length === 2) {
+//       // 現在のタッチ情報を取得
+//       const newTouches = [...event.touches];
+//       const newDistance = getDistance(newTouches[0], newTouches[1]);
 
-      // 拡大率を計算
-      const scaleChange = newDistance / initialDistance;
-      scale *= scaleChange;
+//       // 拡大率を計算
+//       const scaleChange = newDistance / initialDistance;
+//       scale *= scaleChange;
 
-      // 要素を拡大縮小
-      event.target.style.transform = `scale(${scale})`;
+//       // 要素を拡大縮小
+//       event.target.style.transform = `scale(${scale})`;
 
-      // 状態を更新
-      currentTouches = newTouches;
-      initialDistance = newDistance;
+//       // 状態を更新
+//       currentTouches = newTouches;
+//       initialDistance = newDistance;
 
-      // preventDefault を呼び出して、ブラウザの標準動作を無効化
-      event.preventDefault();
-    }
-  }
-});
+//       // preventDefault を呼び出して、ブラウザの標準動作を無効化
+//       event.preventDefault();
+//     }
+//   }
+// });
 
-document.getElementById('work_container').addEventListener('touchend', function(event) {
-  // タッチが終了したら状態をリセット
-  if (event.touches.length < 2) {
-    currentTouches = [];
-    initialDistance = 0;
-  }
-});
+// document.getElementById('work_container').addEventListener('touchend', function(event) {
+//   // タッチが終了したら状態をリセット
+//   if (event.touches.length < 2) {
+//     currentTouches = [];
+//     initialDistance = 0;
+//   }
+// });
 
 // 2点間の距離を計算する関数
 function getDistance(touch1, touch2) {
