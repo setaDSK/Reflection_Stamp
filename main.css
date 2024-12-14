@@ -12,13 +12,13 @@ ul{
 
 #work_container {
   position: relative;
-  width: 70%;
+  width: 65%;
   height: 95vh;
-  background-color: #f5f5f5;
+  background-color: #e2e2e2;
 }
 
 #stamp_container {
-  width: 30%;
+  width: 35%;
   /* padding: 10px; */
   background-color: white;
   border-right: 1px solid #cdcdcd;
@@ -31,7 +31,7 @@ ul{
   justify-content: center;
   min-height: 50px; /* メニュー切替時にタブがズレないように */
   padding: 0;
-  margin: 0;
+  margin-bottom: 10px;
 }
 
 .tab_icon{
@@ -69,24 +69,35 @@ ul{
 .tab_panel-box-all{
   display: none;
 }
-.tab_panel-box-face{
-  display: none;
-}
-.tab_panel-box-hair{
-  display: none;
-}
-.tab_panel-box-eye{
-  display: none;
-}
-.tab_panel-box-body{
-  display: none;
-}
 .tab_panel-box-light{
   display: none;
 }
 .tab_panel-box-color{
   display: none;
 }
+.tab_panel-box-3d{
+  display: none;
+}
+.tab_panel-box-image{
+  display: none;
+}
+.tab_panel-box-kouzu{
+  display: none;
+}
+.tab_panel-box-hair{
+  display: none;
+}
+.tab_panel-box-face{
+  display: none;
+}
+.tab_panel-box-ornament{
+  display: none;
+}
+.tab_panel-box-body{
+  display: none;
+}
+
+
 
 /* is-showがついているときのスタイル */
 .tab_panel-box.is-show{
@@ -97,7 +108,7 @@ ul{
   /* list-style-type: none; */
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 3px;
   padding: 0;
 }
 
@@ -108,15 +119,16 @@ li[class^="stamp_list"]  {
 }
 
 .stamp_btn button {
-  background-color: white;
+  background-color: rgb(169, 169, 169);
   border-color: rgb(204, 204, 204);
-  border-width: 0.5px;
+  /* border-width: 0.5px; */
   border: none;
+  border-radius: 10px;
 }
 
 .stamp_btn img{
-  width: 8vw;
-  height: 8vw;/*これでリストが正方形に*/  
+  width: 9vw;
+  height: 9vw;/*これでリストが正方形に*/  
   object-fit: contain;
 }
 
@@ -143,6 +155,11 @@ li[class^="stamp_list"]  {
   width: 50px;
 }
 
+.upload-container{
+  position: absolute;
+  left: 40%;
+  margin: 5px;}
+
 .draggable {
   position: absolute;
   cursor: pointer;
@@ -168,6 +185,6 @@ li[class^="stamp_list"]  {
 }
 
 .newStamp{
-  width: 100px;
+  width: 200px;
 }
 
